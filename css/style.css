@@ -1,0 +1,293 @@
+body{
+    background: #ededed;
+}
+section{
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px #bbb;
+    background-color: #fff;
+}
+/* Partie Nom*/
+.Nom{
+    padding-right: 150px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.logo{
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.code{
+  padding-top: 10px;
+}
+
+
+/*Partie Order*/
+.part1{
+    flex: 0 0 70%;
+}
+.part2{
+    flex: 0 0 30%;
+}
+
+/*Partie Menu*/
+.titre{
+text-align: center;
+}
+.tab1{
+    display: grid;
+    grid-template-rows:  auto;
+    background-color: #fff;
+  }
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows:  auto;
+    border: groove;
+  }
+  .elem1 {
+    grid-row-start: 1; 
+    grid-row-end: 3; 
+    background-color: #fff;
+}
+.coeur{
+  float: right;
+  padding-right:10px;
+  padding-top: 5px;
+}
+
+.photo {
+height: 150px;
+width: 150px;
+}
+.elem2{
+    padding-left: 10px;
+}
+.elem3 {
+    grid-column-start: 1; 
+    grid-column-end: 2; 
+    display: flex;
+    /*flex-wrap: wrap;*/
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.quantite{
+  border:none ;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom:30px;
+}
+.elem4 {
+    grid-column-start: 2; 
+    grid-column-end: 3; 
+    padding-top: 20px;
+    padding-right: 10px;
+}
+#col1 {
+     width: 50px;
+     margin-left: 20px;
+}
+#col2 {
+  width: 150px;
+}
+#col3 {
+  width: 50px;
+}
+#prix0{
+  font-weight: bold;
+  margin-left: 50px;
+}
+#prixTotal{
+  font-weight: bold;
+}
+#button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid gray;
+    width: 50px;
+    height: 50px;
+    margin-right: 0px;
+    border-radius: 50%;
+  }
+  
+#button1:hover {
+    background-color: gray;
+    color: white;
+  }
+  
+#button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid gray;
+    width: 50px;
+    height: 50px;
+    margin-left: 0px;
+    border-radius: 50%;
+  }
+  
+#button2:hover {
+    background-color: gray;
+    color: white;
+  }
+  .buttonadd {
+    background-color:black;
+    color:white; 
+    border: 2px solid black;
+    width: 200Px;
+    height: 50px;
+    /*margin-left: 20px;*/
+  }
+  
+  .buttonadd:hover {
+    background-color: gray;
+    color: black;
+  }
+  /*Partie Panier*/
+ .menu{
+    border: 2px solid gray;
+ }
+ .total{
+    border: 2px solid gray;
+ }
+.codepromo{
+    text-align: center;
+}
+ .buttoncode{
+    background-color:black; 
+    color:white; 
+    border: 2px solid black;
+    width: 50Px;
+    height: 50px;
+ }
+ /* formulaire*/
+ form#paiement {
+    /*background:white;*/
+    border: solid black;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding-top: 20px;
+    width: 330px;
+    margin-left: 15px;
+  }
+  form#paiement fieldset {
+    border: none;
+    margin-bottom: 10px;
+  }
+  form#paiement fieldset:last-of-type {
+    margin-bottom: 0;
+  }
+  form#paiement legend {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  form#paiement fieldset fieldset legend {
+    color: black;
+    font-size: 13px;
+    font-weight: normal;
+    padding-bottom: 0;
+  }
+  form#paiement ol li {
+    background: gray;
+    background: rgba(255,255,255,.3);
+    border-color: black;
+    border-color: rgba(255,255,255,.6);
+    border-style: solid;
+    border-width: 2px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 30px;
+    list-style: none;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+  }
+  form#paiement ol ol li {
+    background: none;
+    border: groove;
+    float: left;
+  }
+  form#paiement input,
+form#paiement textarea {
+  background: #ffffff;
+  border: solid gray;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  font: italic 13px Georgia, "Times New Roman", Times, serif;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+}
+form#paiement input:not([type=submit]):focus,
+form#paiement textarea:focus {
+  background: #eaeaea;
+}
+form#paiement input[type=radio] {
+  float: left;
+  margin-right: 5px;
+}
+form#paiement button {
+    background: black;
+    border: none;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+    color: #ffffff;
+    display: block;
+    font: 18px Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    margin: auto;
+    padding: 7px 25px;
+    text-shadow: 0 1px 1px #000000;
+    text-transform: uppercase;
+  }
+  form#paiement button:hover {
+    background: gray;
+    cursor: pointer;
+  }
+  input:invalid {
+    border: 2px dashed red;
+  }
+  
+  input:valid {
+    border: 1px solid black;
+  }
+
+  @media screen and (min-width: 1200px){
+    .code{
+      padding-top: 150px;
+    }
+    .quantite{
+      border: none ;
+      color: black;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      padding-bottom:0px;
+    }
+  }
+  @media screen and (min-width: 768px){
+  .tab1{
+    display: grid;
+    grid-template-rows:  auto;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+  }
+  .elem4 {
+    grid-column-start: 2; 
+    grid-column-end: 3; 
+    padding-top: 20px;
+}
+  }
+      

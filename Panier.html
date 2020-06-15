@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <title>Panier</title>
+</head>
+<body>
+    <Section>
+        <div class="logo">
+            <img src="res/logo.png" alt="Logo">
+        </div>
+        <div class="Nom">
+          <h1> McDonald's <h1>
+          <h2> Livraison à domicile de Burger </h2> 
+          <h3> Avenue Mohamed V, Tunis</h3>
+        </div>
+        <div class="code">
+            <h5 style="text-align: center;color: chocolate;">Promo Code : PROM55 </h5>
+            <p style="text-align: center;"> 5TND de réduction dés 50TND</p>
+        </div>
+    </Section>
+    <!--Menu-->
+    <section>
+        <div class="part1">
+            <H2 class="titre">Nos Menus Best Of</H2>
+            <div class="tab1">
+                <!--Menu 1 Filet o fish-->
+                <div class="box">
+                    <div class="elem1">
+                        <img class="photo" src="res/ FILET-O-FISH.png" alt="Image  FILET-O-FISH">
+                    </div>
+                     <div class="elem2">
+                        <br>
+                        <h4 id="id1">FISH</h4>
+                        <p> Pain spécial, préparations de poisson pané, fromage fondu, sauce.</p>
+                    </div>
+                    <div class="elem3">
+                        <button id="button1" onclick="add('qte1')" > + </button>
+                        <input type="text" value="1" style ="border:none" class="quantite" id ="qte1" size="2"  maxlength="4" onkeypress="return isNumberKey(event);">
+                        <button id="button2" onclick="substract('qte1')"> - </button>
+                    </div>
+                     <div class="elem4">
+                        <button class="buttonadd" type="submit" onclick="ajouter(1)" > 
+                            <H6 style=" float: left; width: value; "> Add to Order</H6>
+                            <h6 style=" float: right; width: value; " id="prix1">14 TND</h6>
+                        </button>
+                        <div class="coeur">
+                        <i style="font-size: 30px; color: #DCD9D8;" class="fas fa-heart" id="coeur1" onclick="couleur(this.id)"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--Menue 2 le 280-->
+                <div class="box">
+                    <div class="elem1">
+                        <img class="photo" src="res/Le 280.png" alt="Image Le 280">
+                    </div>
+                     <div class="elem2">
+                        <br>
+                        <h4 id="id2" >280 ORIGINAL</h4>
+                        <p> Pain spécial, steak haché, emmental fondu, cheddar fondu, oignons, tomate, sauce, ketchup</p>
+                    </div>
+                    <div class="elem3">
+                        <button id="button1" onclick="add('qte2')" > + </button>
+                        <input type="text" value="1" style ="border:none"  class="quantite" id ="qte2" size="2"  maxlength="4" onkeypress="return isNumberKey(event);">
+                        <button id="button2" onclick="substract('qte2')"> - </button>
+                    </div>
+                     <div class="elem4">
+                        <button class="buttonadd" type="submit" onclick="ajouter(2)" > 
+                            <H6 style=" float: left; width: value; "> Add to Order</H6>
+                            <h6 style=" float: right; width: value; " id="prix2">17 TND</h6>
+                        </button>
+                        <div class="coeur">
+                            <i style="font-size: 30px; color: #DCD9D8;" class="fas fa-heart" id="coeur2" onclick="couleur(this.id)"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--Menu 3 BIG MAC-->
+                <div class="box">
+                    <div class="elem1">
+                        <img class="photo" src="res/Big Mac.png" alt="Image big mac">
+                    </div>
+                     <div class="elem2">
+                        <br>
+                        <h4 id="id3">BIG MAC</h4>
+                        <p> Pain spécial, steaks hachés, salade, oignon, cornichon, fromage fondu, sauce.</p>
+                    </div>
+                    <div class="elem3">
+                        <button id="button1" onclick="add('qte3')" > + </button>
+                        <input type="text" value="1" style ="border:none"  class="quantite" id ="qte3" size="2"  maxlength="4" onkeypress="return isNumberKey(event);">
+                        <button id="button2" onclick="substract('qte3')"> - </button>
+                    </div>
+                     <div class="elem4">
+                        <button class="buttonadd" type="submit" onclick="ajouter(3)" > 
+                            <H6 style=" float: left; width: value; "> Add to Order</H6>
+                            <h6 style=" float: right; width: value; " id="prix3">15 TND</h6>
+                        </button>
+                        <div class="coeur">
+                        <i style="font-size: 30px; color: #DCD9D8;" class="fas fa-heart" id="coeur3" onclick="couleur(this.id)"></i>
+                        </div>
+                    </div>
+                </div>
+                   <!--Menu 4 McCHICKEN-->
+                   <div class="box">
+                    <div class="elem1">
+                        <img class="photo" src="res/McCHICKEN.png" alt="Image McCHICKEN">
+                    </div>
+                     <div class="elem2">
+                        <br>
+                        <h4 id="id4" >McCHICKEN</h4>
+                        <p> Pain spécial, spécialité panée au poulet, salade, sauce.</p>
+                    </div>
+                    <div class="elem3">
+                        <button id="button1" onclick="add('qte4')" > + </button>
+                        <input type="text" value="1" style ="border:none"  class="quantite" size="2"  id ="qte4" maxlength="4" onkeypress="return isNumberKey(event);">
+                        <button id="button2" onclick="substract('qte4')"> - </button>
+                    </div>
+                     <div class="elem4">
+                        <button class="buttonadd" type="submit" onclick="ajouter(4)" > 
+                            <H6 style=" float: left; width: value; "> Add to Order</H6>
+                            <h6 style=" float: right; width: value; " id="prix4">13 TND</h6>
+                        </button>
+                        <div class="coeur">
+                        <i style="font-size: 30px; color: #DCD9D8;" class="fas fa-heart" id="coeur4" onclick="couleur(this.id)"></i>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <H2 class="titre">Nos dessert</H2>
+            <div class="tab1">
+                <!--Dessert 1 BROWNIE CHOCOLAT-NOISETTES-->
+                <div class="box">
+                    <div class="elem1">
+                        <img class="photo" src="res/BROWNIE CHOCOLAT-NOISETTES.png" alt="Image  BROWNIE CHOCOLAT-NOISETTES">
+                    </div>
+                     <div class="elem2">
+                        <br>
+                        <h4 id="id5" >BROWNIE CHOCOLAT-NOISETTES</h4>
+                        <p> Brownie chocolat au lait et noisette (*produit décongelé).</p>
+                    </div>
+                    <div class="elem3">
+                        <button id="button1" onclick="add('qte5')" > + </button>
+                        <input type="text" value="1" style ="border:none"  class="quantite" id ="qte5" size="2"  maxlength="4" onkeypress="return isNumberKey(event);">
+                        <button id="button2" onclick="substract('qte5')"> - </button>
+                    </div>
+                     <div class="elem4">
+                        <button class="buttonadd" type="submit" onclick="ajouter(5)" > 
+                            <H6 style=" float: left; width: value; "> Add to Order</H6>
+                            <h6 style=" float: right; width: value; " id="prix5">5 TND</h6>
+                        </button>
+                        <div class="coeur">
+                        <i style="font-size: 30px; color: #DCD9D8;" class="fas fa-heart" id="coeur5" onclick="couleur(this.id)"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--Dessert 2 DONUT SAVEUR CHOCOLAT-->
+                <div class="box">
+                    <div class="elem1">
+                        <img class="photo" src="res/DONUT SAVEUR CHOCOLAT.png" alt="Image DONUT SAVEUR CHOCOLAT">
+                    </div>
+                     <div class="elem2">
+                        <br>
+                        <h4 id="id6">DONUT SAVEUR CHOCOLAT</h4>
+                        <p>Donut fourrage saveur chocolat (*produit décongelé).</p>
+                    </div>
+                    <div class="elem3">
+                        <button id="button1" onclick="add('qte6')" > + </button>
+                        <input type="text" value="1" style ="border:none"  class="quantite" id ="qte6" size="2"  maxlength="4" onkeypress="return isNumberKey(event);">
+                        <button id="button2" onclick="substract('qte6')"> - </button>
+                    </div>
+                     <div class="elem4">
+                        <button class="buttonadd" type="submit" onclick="ajouter(6)" > 
+                            <H6 style=" float: left; width: value; "> Add to Order</H6>
+                            <h6 style=" float: right; width: value; " id="prix6">5 TND</h6>
+                        </button>
+                        <div class="coeur">
+                        <i style="font-size: 30px; color: #DCD9D8;" class="fas fa-heart" id="coeur6" onclick="couleur(this.id)"></i>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <H2 class="titre">Nos boissons</H2>
+            <div class="tab1">
+                <!--boisson 1 coca-->
+                <div class="box">
+                    <div class="elem1">
+                        <img class="photo" src="res/Coca Cola.png" alt="Image COCA-COLA">
+                    </div>
+                     <div class="elem2">
+                        <br>
+                        <h4 id="id7">COCA-COLA</h4>
+                    </div>
+                    <div class="elem3">
+                        <button id="button1" onclick="add('qte7')" > + </button>
+                        <input type="text" value="1" style ="border:none"  class="quantite" id ="qte7" size="2"  maxlength="4" onkeypress="return isNumberKey(event);">
+                        <button id="button2" onclick="substract('qte7')"> - </button>
+                    </div>
+                     <div class="elem4">
+                        <button class="buttonadd" type="submit" onclick="ajouter(7)" > 
+                            <H6 style=" float: left; width: value; "> Add to Order</H6>
+                            <h6 style=" float: right; width: value; " id="prix7">3 TND</h6>
+                        </button>
+                        <div class="coeur">
+                        <i style="font-size: 30px; color: #DCD9D8;" class="fas fa-heart" id="coeur7" onclick="couleur(this.id)"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--boisson 2 COCA-COLA® SANS SUCRES-->
+                <div class="box">
+                    <div class="elem1">
+                        <img class="photo" src="res/Coca Cola 0.png" alt="Image COCA-COLA® SANS SUCRES">
+                    </div>
+                     <div class="elem2">
+                        <br>
+                        <h4 id="id8">COCA-COLA SANS SUCRES</h4>
+                    </div>
+                    <div class="elem3">
+                        <button id="button1" onclick="add('qte8')" > + </button>
+                        <input type="text" value="1" style ="border:none"  class="quantite" id ="qte8" size="2"  maxlength="4" onkeypress="return isNumberKey(event);">
+                        <button id="button2" onclick="substract('qte8')"> - </button>
+                    </div>
+                     <div class="elem4">
+                        <button class="buttonadd" type="submit" onclick="ajouter(8)" > 
+                            <H6 style=" float: left; width: value; "> Add to Order</H6>
+                            <h6 style=" float: right; width: value; " id="prix8">3 TND</h6>
+                        </button>
+                        <div class="coeur">
+                        <i style="font-size: 30px; color: #DCD9D8;" class="fas fa-heart" id="coeur8" onclick="couleur(this.id)"></i>
+                        </div>
+                    </div>
+                </div> 
+                <!--boisson3 sprite-->
+                <div class="box">
+                    <div class="elem1">
+                        <img class="photo" src="res/Sprite.png" alt="Image Sprite">
+                    </div>
+                     <div class="elem2">
+                        <br>
+                        <h4 id="id9">Sprite</h4>
+                    </div>
+                    <div class="elem3">
+                        <button id="button1" onclick="add('qte9')" > + </button>
+                        <input type="text" value="1" style ="border:none"  class="quantite" id ="qte9" size="2"  maxlength="4" onkeypress="return isNumberKey(event);">
+                        <button id="button2" onclick="substract('qte9')"> - </button>
+                    </div>
+                     <div class="elem4">
+                        <button class="buttonadd" type="submit" onclick="ajouter(9)" > 
+                            <H6 style=" float: left; width: value; "> Add to Order</H6>
+                            <h6 style=" float: right; width: value; " id="prix9">3 TND</h6>
+                        </button>
+                        <div class="coeur">
+                        <i style="font-size: 30px; color: #DCD9D8;" class="fas fa-heart" id="coeur9" onclick="couleur(this.id)"></i>
+                        </div>
+                    </div>
+                </div> 
+                <!--Boisson 4-->
+                <div class="box">
+                    <div class="elem1">
+                        <img class="photo" src="res/Fanta.png" alt="Image Fanta">
+                    </div>
+                     <div class="elem2">
+                        <br>
+                        <h4 id="id10">Fanta</h4>
+                    </div>
+                    <div class="elem3">
+                        <button id="button1" onclick="add('qte10')" > + </button>
+                        <input type="text" value="1" style ="border:none"  class="quantite" id ="qte10" size="2"  maxlength="4" onkeypress="return isNumberKey(event);">
+                        <button id="button2" onclick="substract('qte10')"> - </button>
+                    </div>
+                     <div class="elem4">
+                        <button class="buttonadd" type="submit" onclick="ajouter(10)" > 
+                            <H6 style=" float: left; width: value; "> Add to Order</H6>
+                            <h6 style=" float: right; width: value; " id="prix10">5 TND</h6>
+                        </button>
+                        <div class="coeur">
+                        <i style="font-size: 30px; color: #DCD9D8;" class="fas fa-heart" id="coeur10" onclick="couleur(this.id)"></i>
+                        </div>
+                    </div>
+                </div> 
+
+            </div>
+        </div>
+        <div class="part2">
+            <H2 class="titre">Votre Panier</H2>
+            <!--Menu-->
+            <div class="menu">
+                <div class ="ticket">
+                <table id="tableau" class="table">
+                    <thead>
+                        <th id="col1"> Qte </th>
+                        <th id="col2">Article</th>
+                        <th id="col3" >Prix</th>
+                        <th></th>
+                    </thead>
+                </table>
+                <br><label id="prix0">Prix du panier total</label> : <label id = "prixTotal"></label>
+                <label id = "nbreLignes" hidden>0</label>
+            </div>
+            <br>
+            <div class="codepromo">
+                <input type="text" size="20" style=" height: 50px;" name="Code Promo" placeholder="Code Promo" id="prom">
+                <button class="btn btn-secondary" onclick="promo()"> OK </button>
+            </div>
+            <br>
+            <!--Formulaire pour passer la commande-->
+            <form id=paiement>
+                <fieldset style="margin-left: 20px;">
+                  <legend style="text-align: center;">Vos informations personelles</legend>
+                  <form >
+                    <div class="form-group">
+                        <label for="inputNom">Nom</label>
+                        <input type="text" class="form-control" id="inputnom" placeholder="Nom" required>
+                        <span id='missnom'style="font-size=5px"></span>
+                     </div>
+                     <div class="form-group">
+                        <label for="inputPrenom">Prénom</label>
+                        <input type="text" class="form-control" id="inputprenom" placeholder="Prénom" required>
+                        <span id='missPrenom'style="font-size=5px"></span>
+                     </div>
+                     <div class="form-group">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="exemple@domaine.com">
+                     </div>
+                      <div class="form-group">
+                        <label for="inputPassword4">Téléphone</label>
+                        <input type="number" class="form-control" id="inputtel" placeholder="22564546" required>
+                        <span id='misstel'style="font-size=5px"></span>
+                      </div>
+    
+                    <div class="form-group">
+                      <label for="inputadresse">Adresse</label>
+                      <input type="text" class="form-control" id="inputAdresse" placeholder="56 Avenue Mohamed V"required>
+                      <span id='missadresse'style="font-size=5px"></span>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress2">Address 2</label>
+                      <input type="text" class="form-control" id="inputAddress2" placeholder="Appartement n°, studio, étage">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputState">Ville</label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>Ain Zaghouan</option>
+                          <option>Ariana</option>
+                          <option>Kram</option>
+                          <option>Lac1</option>
+                          <option>Lac2</option>
+                          <option>Marsa</option>
+                          <option>MutuelleVille</option>
+                          <option>Soukra</option>
+                        </select>
+                        <span id='missville'style="font-size=5px"></span>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck" required>
+                          Je confirme que ces informations sont correctes.
+                        </label>
+                      </div>
+                    </div>
+                    <input type="submit"  value="Je commande!" id='bouton_envoi'  >
+                    <br>
+                    <br>
+                  </form>
+                </fieldset>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
